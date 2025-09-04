@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* Page styles removed - now using separate HTML files */
+
+/* Home Page Styles */
+.home-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.home-title {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-weight: bold;
+}
+
+.home-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+.start-btn {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    border: none;
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.start-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Human Body Page Styles */
+.human-body-page {
+    padding: 20px;
+    color: white;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.body-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.body-section {
+    flex: 1;
+    text-align: center;
+}
+
+.body-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.body-diagram {
+    position: relative;
+    display: inline-block;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    margin: 0 auto;
+}
+
+.human-body {
+    position: relative;
+    width: 400px;
+    height: 650px;
+    margin: 0 auto;
+    background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    border-radius: 20px;
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+.body-part {
+    position: absolute;
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.8), rgba(238, 90, 36, 0.7));
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    min-width: 40px;
+    min-height: 30px;
+}
+
+.body-part:hover {
+    background: linear-gradient(135deg, rgba(255, 107, 107, 1), rgba(238, 90, 36, 0.95));
+    border-color: rgba(255, 255, 255, 1);
+    border-width: 4px;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.8);
+    z-index: 10;
+    font-size: 16px;
+}
+
+/* Body Part Positions - Male */
+.male-body .brain { top: 15px; left: 165px; width: 70px; height: 55px; border-radius: 35px; }
+.male-body .eyes { top: 35px; left: 150px; width: 25px; height: 18px; border-radius: 50%; }
+.male-body .eyes.right { left: 225px; }
+.male-body .neck { top: 70px; left: 180px; width: 40px; height: 35px; }
+.male-body .heart { top: 110px; left: 175px; width: 50px; height: 45px; border-radius: 50%; }
+.male-body .lungs { top: 100px; left: 120px; width: 45px; height: 60px; border-radius: 20px; }
+.male-body .lungs.right { left: 235px; }
+.male-body .liver { top: 165px; left: 210px; width: 60px; height: 40px; }
+.male-body .stomach { top: 170px; left: 155px; width: 50px; height: 45px; border-radius: 50%; }
+.male-body .kidneys { top: 200px; left: 130px; width: 30px; height: 40px; border-radius: 15px; }
+.male-body .kidneys.right { left: 240px; }
+.male-body .intestines { top: 230px; left: 160px; width: 80px; height: 50px; }
+.male-body .pelvis { top: 290px; left: 165px; width: 70px; height: 40px; }
+.male-body .arms { top: 115px; left: 65px; width: 35px; height: 100px; }
+.male-body .arms.right { left: 300px; }
+.male-body .legs { top: 330px; left: 155px; width: 35px; height: 130px; }
+.male-body .legs.right { left: 210px; }
+.male-body .feet { top: 465px; left: 145px; width: 40px; height: 25px; border-radius: 20px; }
+.male-body .feet.right { left: 215px; }
+
+/* Body Part Positions - Female */
+.female-body .brain { top: 15px; left: 165px; width: 70px; height: 55px; border-radius: 35px; }
+.female-body .eyes { top: 35px; left: 150px; width: 25px; height: 18px; border-radius: 50%; }
+.female-body .eyes.right { left: 225px; }
+.female-body .neck { top: 70px; left: 180px; width: 40px; height: 35px; }
+.female-body .heart { top: 115px; left: 175px; width: 50px; height: 45px; border-radius: 50%; }
+.female-body .lungs { top: 105px; left: 120px; width: 45px; height: 60px; border-radius: 20px; }
+.female-body .lungs.right { left: 235px; }
+.female-body .breasts { top: 120px; left: 140px; width: 35px; height: 35px; border-radius: 50%; }
+.female-body .breasts.right { left: 225px; }
+.female-body .liver { top: 170px; left: 210px; width: 60px; height: 40px; }
+.female-body .stomach { top: 175px; left: 155px; width: 50px; height: 45px; border-radius: 50%; }
+.female-body .kidneys { top: 205px; left: 130px; width: 30px; height: 40px; border-radius: 15px; }
+.female-body .kidneys.right { left: 240px; }
+.female-body .uterus { top: 250px; left: 170px; width: 50px; height: 45px; border-radius: 50%; }
+.female-body .ovaries { top: 245px; left: 145px; width: 25px; height: 30px; border-radius: 50%; }
+.female-body .ovaries.right { left: 230px; }
+.female-body .pelvis { top: 290px; left: 160px; width: 80px; height: 40px; }
+.female-body .arms { top: 120px; left: 65px; width: 35px; height: 100px; }
+.female-body .arms.right { left: 300px; }
+.female-body .legs { top: 330px; left: 155px; width: 35px; height: 130px; }
+.female-body .legs.right { left: 210px; }
+.female-body .feet { top: 465px; left: 145px; width: 40px; height: 25px; border-radius: 20px; }
+.female-body .feet.right { left: 215px; }
+
+/* Tooltip Styles */
+.tooltip {
+    position: fixed;
+    background: rgba(0,0,0,0.95);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    max-width: 300px;
+    z-index: 1000;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.tooltip.show {
+    opacity: 1;
+}
+
+.tooltip h4 {
+    color: #ff6b6b;
+    margin-bottom: 8px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255,107,107,0.3);
+    padding-bottom: 5px;
+}
+
+.tooltip-description {
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.tooltip-functions {
+    font-size: 12px;
+    color: #e0e0e0;
+}
+
+.tooltip-functions strong {
+    color: #ff6b6b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .body-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .home-title {
+        font-size: 2.5rem;
+    }
+    
+    .human-body {
+        width: 320px;
+        height: 520px;
+    }
+    
+    .tooltip {
+        max-width: 250px;
+    }
+    
+    /* Adjust body parts for mobile */
+    .male-body .brain, .female-body .brain { top: 12px; left: 125px; width: 60px; height: 45px; }
+    .male-body .eyes, .female-body .eyes { top: 28px; left: 115px; width: 20px; height: 15px; }
+    .male-body .eyes.right, .female-body .eyes.right { left: 185px; }
+    .male-body .neck, .female-body .neck { top: 55px; left: 140px; width: 35px; height: 30px; }
+    .male-body .heart, .female-body .heart { top: 90px; left: 135px; width: 45px; height: 40px; }
+    .male-body .lungs, .female-body .lungs { top: 85px; left: 95px; width: 40px; height: 50px; }
+    .male-body .lungs.right, .female-body .lungs.right { left: 185px; }
+    .male-body .breasts, .female-body .breasts { top: 95px; left: 110px; width: 30px; height: 30px; }
+    .male-body .breasts.right, .female-body .breasts.right { left: 180px; }
+    .male-body .liver, .female-body .liver { top: 135px; left: 165px; width: 50px; height: 35px; }
+    .male-body .stomach, .female-body .stomach { top: 140px; left: 125px; width: 45px; height: 40px; }
+    .male-body .kidneys, .female-body .kidneys { top: 165px; left: 105px; width: 25px; height: 35px; }
+    .male-body .kidneys.right, .female-body .kidneys.right { left: 190px; }
+    .male-body .uterus, .female-body .uterus { top: 200px; left: 135px; width: 45px; height: 40px; }
+    .male-body .ovaries, .female-body .ovaries { top: 195px; left: 115px; width: 20px; height: 25px; }
+    .male-body .ovaries.right, .female-body .ovaries.right { left: 185px; }
+    .male-body .intestines, .female-body .intestines { top: 185px; left: 130px; width: 70px; height: 45px; }
+    .male-body .pelvis, .female-body .pelvis { top: 235px; left: 130px; width: 70px; height: 35px; }
+    .male-body .arms, .female-body .arms { top: 95px; left: 50px; width: 30px; height: 80px; }
+    .male-body .arms.right, .female-body .arms.right { left: 240px; }
+    .male-body .legs, .female-body .legs { top: 270px; left: 125px; width: 30px; height: 100px; }
+    .male-body .legs.right, .female-body .legs.right { left: 165px; }
+    .male-body .feet, .female-body .feet { top: 375px; left: 120px; width: 35px; height: 22px; }
+    .male-body .feet.right, .female-body .feet.right { left: 165px; }
+}
